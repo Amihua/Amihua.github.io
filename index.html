@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Sihao Liu 刘斯豪 </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="aeb59e14-41b3-4190-ae17-94c1034a473c" class="page serif"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_11.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Sihao%20Liu%20%E5%88%98%E6%96%AF%E8%B1%AA%20aeb59e1441b34190ae1794c1034a473c/b881ceee-1d6f-4d7a-870a-f27719269f8c.webp"/></div><h1 class="page-title">Sihao Liu 刘斯豪 </h1><p class="page-description"></p></header><div class="page-body"><div id="5ac52b23-9152-4f7e-b177-617427be2baf" class="column-list"><div id="a23d3328-9747-4d5c-a2a9-9e78bfcf82e9" style="width:87.5%" class="column"><blockquote id="0865e2cc-41b4-48f2-968c-62f34a905449" class="">Aka. Amihua Lau<p id="4932b127-cb8e-4e7b-aa41-d6da65d4d214" class="">Ah, <em>but a man&#x27;s reach should exceed his grasp</em>,. Or <em>what&#x27;s a heaven for</em>? — <a href="https://www.poetryfoundation.org/poems/43745/andrea-del-sarto"><strong>Robert Browning</strong></a></p></blockquote><p id="7f069b77-943b-4dbe-9dea-2d2acbb85208" class="">I&#x27;m graduating with a Master&#x27;s in Mathematics and Statistics from Guangdong University of Technology in 2025, mentored by Associate Professor <mark class="highlight-blue"><a href="https://scholar.google.com.hk/citations?user=DAHXIlIAAAAJ&amp;hl=zh-CN">Weihua He</a></mark>.<br/>My research focuses on applying deep learning to <br/><mark class="highlight-orange"><strong>combinatorial optimization</strong></mark> and improving graph neural networks for <strong><mark class="highlight-orange">subgraph identification</mark></strong>.</p><p id="e8dc1a51-3ad8-4c21-b53d-89237aab7d6e" class="">
+</p><h1 id="2adbcf0e-945c-4eda-9ca4-7601f6afadae" class=""> 📰 News</h1><ul id="0b7a5d71-883d-42b7-961c-d299c004f5dc" class="bulleted-list"><li style="list-style-type:disc">April, 2024. Our latest research paper <strong>Learn to solve dominating set problem with GNN and reinforcement learning</strong> has been published at <strong><a href="https://www.sciencedirect.com/science/article/pii/S0096300324001899">Applied Mathematics and Computation</a></strong>. </li></ul></div><div id="330dbc10-b805-48df-9f9b-9c845abd15b2" style="width:12.5%" class="column"><figure id="610e0266-1593-46c7-bf3a-e7e4e7dbf5c8" class="image" style="text-align:right"><a href="Sihao%20Liu%20%E5%88%98%E6%96%AF%E8%B1%AA%20aeb59e1441b34190ae1794c1034a473c/%25E5%2588%2598%25E6%2596%25AF%25E8%25B1%25AA-ID_photo.jpg"><img style="width:144px" src="Sihao%20Liu%20%E5%88%98%E6%96%AF%E8%B1%AA%20aeb59e1441b34190ae1794c1034a473c/%25E5%2588%2598%25E6%2596%25AF%25E8%25B1%25AA-ID_photo.jpg"/></a></figure></div></div><hr id="e06d8a86-0657-41a0-906d-423d9ce62682"/><h1 id="34ff4c48-b952-4706-9e31-34131d3f2bfd" class="">☎️ Personal Information</h1><div id="83ca0216-7209-41ca-8dc4-b9506b9a928d" class="column-list"><div id="ea1f8393-a117-4d10-a67e-51ec23bd1f32" style="width:50%" class="column"><p id="85579504-d723-4495-bdeb-0a312dfef6db" class="">📧 Email：amihua@mail2.gdut.edu.cn </p><p id="f23e2a5b-6840-4326-85c8-054109040c63" class="">🔤 Language:   Chinese/English</p><p id="3429570f-d409-4a1f-81e0-2cb69374a652" class="">📺 Social-Media：<mark class="highlight-orange">Amihua</mark></p></div><div id="12e263ba-a15a-40d1-a6ed-4995e4785280" style="width:50%" class="column"><figure id="8dfe5af6-4da3-4488-8557-631dad8b2d84"><a href="https://github.com/Amihua" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Amihua - Overview</div><div class="bookmark-description">Amihua has 36 repositories available. Follow their code on GitHub.</div></div><div class="bookmark-href"><img src="https://github.com/fluidicon.png" class="icon bookmark-icon"/>https://github.com/Amihua</div></div><img src="https://avatars.githubusercontent.com/u/46915571?v=4?s=400" class="bookmark-image"/></a></figure></div></div><hr id="ee9c2057-1cd5-4738-8606-f436d35c37f6"/><h1 id="17a1ec00-509a-4ac7-b715-626c03e0743a" class="">🛠 Research Interests</h1><ul id="99dc22e3-a16f-45e2-9b2d-72d163f11c58" class="bulleted-list"><li style="list-style-type:disc">Deep Learning on Graph</li></ul><ul id="89cb9e6c-4ae6-42b1-a7fe-d460202468a6" class="bulleted-list"><li style="list-style-type:disc">C<mark class="highlight-default">ombinatorial Optimization</mark></li></ul><ul id="83ea98be-9cc3-450b-b2ae-4ebdf722408c" class="bulleted-list"><li style="list-style-type:disc">Bioinformatics</li></ul><hr id="49641b2b-9dde-409e-bbde-69e7d3830db9"/><h1 id="5c126257-2f3a-41e6-b3d0-bc37be1a83a8" class="">👩‍💻 Educations</h1><div id="ba408b9e-efb6-41de-8283-b19ccaae6d0e" class="column-list"><div id="a25f3561-b947-43a2-b234-6eb13fc2fa19" style="width:16.666666666666664%" class="column"><h3 id="2c3047b0-7ca8-4765-ae35-5d02aba45be7" class="">2022.09 — Now</h3></div><div id="97012387-ad14-4572-8938-35474ddf7cbd" style="width:62.5%" class="column"><h3 id="e36d56b6-5c1d-4500-b560-f20f3a939e66" class=""><mark class="highlight-orange"><strong>Master&#x27;s student</strong></mark> in Mathematics at the School of Mathematics and Statistics, Guangdong University of Technology</h3></div><div id="2eef657f-5fdc-4106-8995-33a2a4b0d1d7" style="width:20.83333333333332%" class="column"><figure id="5e7b54f2-a67e-4f16-863e-936c600f211b" class="image"><a href="Sihao%20Liu%20%E5%88%98%E6%96%AF%E8%B1%AA%20aeb59e1441b34190ae1794c1034a473c/logo.png"><img style="width:240px" src="Sihao%20Liu%20%E5%88%98%E6%96%AF%E8%B1%AA%20aeb59e1441b34190ae1794c1034a473c/logo.png"/></a></figure></div></div><div id="ccd0fec4-709f-427a-97b6-8fc9e21ad687" class="column-list"><div id="7393d098-3283-4bf2-aeb3-15af8e7ca22e" style="width:16.666666666666664%" class="column"><h3 id="97c50a6c-6933-4114-8f53-86c0eb8f6ae0" class="">2023.11 — 2024.01</h3></div><div id="783d90c2-588c-4e13-910e-90dbca6e6967" style="width:62.5%" class="column"><h3 id="3450cf8c-a221-4237-b832-7719eac15a1a" class=""><mark class="highlight-orange">Visiting Scholar</mark> at the Academy of Mathematics and Systems Science, Chinese Academy of Sciences</h3></div><div id="28d48a4b-afd0-4382-a6ca-f416f8375c72" style="width:20.83333333333332%" class="column"><figure id="8defb5f2-dccc-45d7-9ceb-bed18c989eab" class="image"><a href="Sihao%20Liu%20%E5%88%98%E6%96%AF%E8%B1%AA%20aeb59e1441b34190ae1794c1034a473c/amss2018-logo.png"><img style="width:424.15625px" src="Sihao%20Liu%20%E5%88%98%E6%96%AF%E8%B1%AA%20aeb59e1441b34190ae1794c1034a473c/amss2018-logo.png"/></a></figure></div></div><div id="95509daa-2582-4bde-a7af-553a6bf02dc6" class="column-list"><div id="96c7355e-513b-44c1-9a47-76aa0f12562a" style="width:16.666666666666664%" class="column"><h3 id="39f72e78-386c-45e0-88a9-a45992f327ca" class="">2018.09 — 2022.06</h3><p id="2c53b3ad-0a13-4545-8f14-03b2ed94b3dc" class="">
+</p></div><div id="263f1073-3f62-4daf-871c-7db610665148" style="width:62.5%" class="column"><h3 id="3e40874a-00a4-46b7-b7ea-ee5a57d80120" class=""><mark class="highlight-orange">Bachelor&#x27;s degree</mark> in Mathematics and Applied Mathematics from the School of Mathematics and Statistics, Guangdong University of Technology</h3></div><div id="ccdab0c0-7ec0-4550-8735-d5b0c0eaf8f8" style="width:20.833333333333357%" class="column"><figure id="1dab9047-0b4d-4532-af41-34776e5c9e05" class="image"><a href="Sihao%20Liu%20%E5%88%98%E6%96%AF%E8%B1%AA%20aeb59e1441b34190ae1794c1034a473c/logo.png"><img style="width:240px" src="Sihao%20Liu%20%E5%88%98%E6%96%AF%E8%B1%AA%20aeb59e1441b34190ae1794c1034a473c/logo.png"/></a></figure></div></div><hr id="b556935d-da68-459c-a8a3-42a909c7934b"/><h1 id="59dc0de5-f279-4960-b64f-6a9ce0df767b" class="">📖 Publications</h1><ol type="1" id="24a74bb4-1856-47d3-831a-acbab4135d83" class="numbered-list" start="1"><li>M. Chen, <strong>S. Liu</strong>, and W. He, Learn to solve dominating set problem with GNN and reinforcement learning, <em>Applied Mathematics and Computation</em>, vol. 474, p. 128717, 2024. <strong>(JCR Q1)</strong></li></ol><ol type="1" id="8d893664-049c-42e5-a61c-16de3fe9b088" class="numbered-list" start="2"><li><strong>Sihao Liu #</strong>, Z. Z. #, W. He, and G. Yan, “Cybond punk: Rethinking message passing mechanism via graph edge space,” 2024+ <strong>(Under review)</strong></li></ol><ol type="1" id="a1735ed9-15a9-43e9-a555-607a352e3238" class="numbered-list" start="3"><li><strong>Sihao Liu #</strong>, Z. Z. #, and W. Zhao, “FlexiDrop: Theoretical Insights and Practical Advances in Random Dropout Method on GNNs,” 2024+ <strong>(Under review)</strong></li></ol><ol type="1" id="88937578-3740-4d78-a8d1-d173ced1c168" class="numbered-list" start="4"><li><strong>Sihao Liu</strong>, “Solving combinatorial optimization problems via reinforcement learning,” Bachelor’s thesis, Guangdong University of Technology, 2022.</li></ol><hr id="4d99a1b9-d4e1-40f0-9902-1d82d37161fe"/><h1 id="e68d7ba5-ea01-4681-a918-476ab346e545" class="">✍️ Blog</h1><div id="5bd859dd-748f-4c69-bb2e-96f9288ff80d" class="collection-content"><h4 class="collection-title">✍️ Blog</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Created</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>https://www.xiaohongshu.com/explore/655f14940000000032039b17</th></tr></thead><tbody><tr id="eadbe43b-5af3-4ef1-83a0-5eb84b95bed7"><td class="cell-title"><a href="https://www.notion.so/Learning-Competition-Strategies-from-Kaggle-Masters-eadbe43b5af34ef183a05eb84b95bed7?pvs=21"><span class="icon">👨‍🎓</span>Learning Competition Strategies from Kaggle Masters.</a></td><td class="cell-aXNy"><time>@November 24, 2023 10:00 PM</time></td><td class="cell-zV_~"></td><td class="cell-A&gt;i}"></td></tr></tbody></table><br/><br/></div><p id="60d4ab63-279d-40b6-961d-020674f59a3b" class="">
+</p><hr id="28fbe8f6-9521-4853-9d73-e6c4d4c3c88d"/><h1 id="c39d2355-3896-4e01-82aa-fc2335f929b3" class="">💬 Lectures &amp; Talks</h1><div id="835df1a6-44e5-4d8a-94de-cdd97285d34b" class="column-list"><div id="fcf249b7-83a2-4a77-936d-86814dca1ac8" style="width:8.333333333333332%" class="column"><h2 id="449ee9dd-4067-4e44-bf19-66d8abd267ab" class="">Time</h2><p id="fc9ede60-4bba-40b7-a86a-60cec3ef0f6b" class="">June, 2023</p><p id="8d47e9cd-d5a1-4286-9875-094b6641b853" class="">Sept., 2023</p><p id="e1ba0c7a-1354-4e56-b23f-2272f9819eab" class="">Jan., 2024</p></div><div id="f253345b-d9ce-418f-91e0-9e829e508592" style="width:29.166666666666664%" class="column"><h2 id="6c68a7db-c3eb-4e79-8097-eeb2eefc58ab" class="">Area</h2><p id="e8a3423f-70aa-446b-9a94-3267420db454" class="">Workshop on Network Biology, Qingdao</p><p id="59fea500-7fd3-4bc5-9a90-46367f183ba4" class="">Shanghai Center for Mathematical Sciences</p><p id="af6253bf-0a44-4484-b835-10612358629f" class="">Academy of Mathematics and Systems Science, Chinese Academy of Sciences</p></div><div id="01c6eaa1-d8ad-4841-b3bb-937fa616b268" style="width:62.5%" class="column"><h2 id="0d9e5141-9d9e-487e-8ec8-95dae78b3bd8" class="">Topic</h2><p id="1d6c73ae-422e-40a2-8f38-0fb6589f06fa" class="">Learn to solve dominating set problem via RL and GNN</p><p id="880f0c63-3bdb-49a5-86b8-3412cceb8201" class="">Learn to solve dominating set problem with graph neural networks</p><p id="6b2d7c54-1163-4d3a-b4c5-aa1ccb59e48b" class="">CyBond Punk: Rethinking Message Passing Mechanism via Graph Edge Space</p></div></div><hr id="03738654-3fe1-4ab5-9ced-f83dc7d13181"/><h1 id="546e711e-f113-457d-a573-55be43bec593" class="">🏆 Awards</h1><div id="9db90e03-dbf9-4f4d-aa2c-5083f97e5676" class="column-list"><div id="c02805f2-f053-46ab-9052-9223157c4374" style="width:12.5%" class="column"><h2 id="c6127d6b-5f00-4e64-875b-57652ef4c4e6" class="">Time</h2><p id="c40907fd-392c-47e7-9d60-307317526297" class="">Apr., 2024</p><p id="ced6a937-008e-4e40-b9a7-ceeef41f3a4d" class="">Nov., 2023</p></div><div id="f643c7cf-c38e-46d4-8f49-6d2af5f859b0" style="width:87.5%" class="column"><h2 id="6176b3ae-b4c1-4b00-a173-514073d9727e" class="">Awards</h2><p id="76b9d0a5-9f51-4b0b-889f-664932d6754f" class="">Kaggle <strong>Optiver - Trading at the Close </strong><mark class="highlight-orange"><strong>Bronze Medal. </strong></mark><span style="border-bottom:0.05em solid"><mark class="highlight-default"><strong>(10%)</strong></mark></span></p><p id="b066ee9e-c31d-4d5c-97ed-c638ef8db46a" class=""><mark class="highlight-orange"><strong>Second Prize</strong></mark> in the Huawei Cup National Graduate Mathematical Modeling Competition. <span style="border-bottom:0.05em solid">(1%)</span></p><p id="82aa6d99-c343-4e1b-a118-1b4e466fb432" class="">
+</p></div></div><p id="39c512e1-59a8-4ab7-be66-fa7cec2cf9df" class="">
+</p><div id="5147cb71-825a-42a5-8b39-c11c6a800343" class="column-list"><p id="7a7fe7c0-80ca-42de-b59f-2c73bcc7732b" class="">2023年6月</p><p id="826c2911-bf3d-4347-978e-dd89c5c4e39d" class="">2023年9月</p><p id="2d8b8f68-ef1a-4045-9a36-87c95ac431b5" class=""><strong>地点</strong></p><p id="fa09768e-adff-471e-8eb2-e337cf1e4126" class="">青岛网络生物学研讨会</p><p id="dbeb3e25-b3e5-4006-98bd-2309d512eceb" class="">上海数学中心</p></div><p id="aa8d1d9a-cee7-4241-95ce-d3fc39053cc6" class="">
+</p><p id="4e1a83cf-8867-4246-a1a1-69895a1904f0" class="">
+</p><p id="5a0fffb9-a349-4098-8462-3b54904036e3" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
